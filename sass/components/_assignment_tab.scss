@@ -1,0 +1,22 @@
+.assignment-tab:nth-child(1)
+{
+	border-top: 2px solid black;
+}
+
+.assignment-tab
+{
+	padding: 10px;
+	border-bottom: 2px solid black;
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+
+	h2
+	{
+		margin: 0;
+	}
+
+	p
+	{
+		margin: 10px 0;
+	}
+}

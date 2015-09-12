@@ -1,4 +1,4 @@
-<div ng-repeat="x in data">
+<div class="assignment-tab" ng-repeat="x in data">
 	<h2>{{x.title}}</h2>
-	<p>{{x.due_at | date: 'longDate'}}</p>
+	<p>due {{x.due_at | date: 'longDate'}}</p>
 </div>

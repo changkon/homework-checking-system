@@ -2,6 +2,23 @@ h1 {
   color: red;
 }
 
+.assignment-tab:nth-child(1) {
+  border-top: 2px solid black;
+}
+
+.assignment-tab {
+  padding: 10px;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+.assignment-tab h2 {
+  margin: 0;
+}
+.assignment-tab p {
+  margin: 10px 0;
+}
+
 #main {
   display: flex;
   flex-direction: row;
@@ -9,10 +26,11 @@ h1 {
 
 #assignment-tab {
   flex: 1;
+  min-width: 300px;
 }
 
 #assignment-content {
-  flex: 3;
+  flex: 7;
 }
 
 /*# sourceMappingURL=main.css.map */
