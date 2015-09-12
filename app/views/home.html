@@ -1,10 +1,10 @@
 <h1>Assignments</h1>
 <div id="main">
-	<div id="assignment-tab" ng-controller="TabCtrl">
+	<div id="assignment-tab">
 		<div class="bleh" ng-repeat="x in data">
 			<h2>{{x.title}}</h2>
 			<p>{{x.due_at | date: 'longDate'}}</p>
 		</div>
 	</div>
-	<div id="assignment-content" ng-controller="ContentCtrl">{{greeting}}</div>
+	<div id="assignment-content"></div>
 </div>
