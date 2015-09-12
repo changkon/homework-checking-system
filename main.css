@@ -2,4 +2,17 @@ h1 {
   color: red;
 }
 
+#main {
+  display: flex;
+  flex-direction: row;
+}
+
+#assignment-tab {
+  flex: 1;
+}
+
+#assignment-content {
+  flex: 3;
+}
+
 /*# sourceMappingURL=main.css.map */

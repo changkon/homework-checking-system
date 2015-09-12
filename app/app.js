@@ -4,7 +4,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
 	//$urlRouterProvider.otherwise('');
 
 	$stateProvider.state('home', {
-		//url: '',
+		url: '',
 		views: {
 			'assignment': {
 				templateUrl: 'app/views/assignment_info.html',

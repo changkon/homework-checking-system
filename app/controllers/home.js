@@ -6,7 +6,6 @@ app.controller('TabCtrl', ['$scope', '$http', function($scope, $http) {
 	then(function(response) {
 		//success
 		$scope.data = response.data;
-		console.log('success');
 	}, function(response) {
 		//failure
 		console.log('fail');
