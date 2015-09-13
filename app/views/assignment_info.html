@@ -1,4 +1,6 @@
 <div class="assignment-tab" ng-repeat="x in data">
-	<h2>{{x.title}}</h2>
-	<p>due {{x.due_at | date: 'longDate'}}</p>
+	<a ui-sref="home.content({ id: x.id, creator_id: x.creator.id})">
+		<h3>{{x.title}}</h3>
+		<p>due {{x.due_at | date: 'longDate'}}</p>
+	</a>
 </div>

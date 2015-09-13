@@ -1,16 +1,28 @@
-#main
-{
-	display: flex;
-	flex-direction: row;
-}
-
 #assignment-tab
 {
-	flex: 1;
-	min-width: 300px;
+	//min-width: 300px;
 }
 
-#assignment-content
+#tempWindow
 {
-	flex: 7;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 2px solid black;
+}
+
+#selection-tab
+{
+	ul
+	{
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		border-bottom: 2px solid black;
+	}
+
+	li
+	{
+		display: inline-block;
+	}
 }

@@ -5,12 +5,11 @@
 
 .assignment-tab
 {
-	padding: 10px;
 	border-bottom: 2px solid black;
 	border-left: 2px solid black;
 	border-right: 2px solid black;
 
-	h2
+	h3
 	{
 		margin: 0;
 	}
@@ -18,5 +17,11 @@
 	p
 	{
 		margin: 10px 0;
+	}
+
+	a
+	{
+		display: block;
+		padding: 10px;
 	}
 }

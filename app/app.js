@@ -1,7 +1,7 @@
 var app = angular.module('app', ['ui.router']);
 
-app.config(function($stateProvider, $urlRouterProvider) {
-	//$urlRouterProvider.otherwise('');
+app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
+	//$urlRouterProvider.otherwise('/');
 
 	$stateProvider.state('home', {
 		url: '',
@@ -15,6 +15,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
 				controller: 'ContentCtrl'
 			}
 		}
+	}).state('home.content', {
+		url: '/{id:int}/{creator_id:int}',
+		templateUrl: 'app/views/assignment_detail.html'
 	});
-
 });

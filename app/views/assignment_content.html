@@ -1,1 +1,13 @@
-<p>random text</p>
+<!-- Show if base url -->
+<div id="tempWindow" ng-if="location.path()==''">Select an assignment</div>
+
+<!-- Show for assignment checking -->
+<div id="selection-tab" ng-if="location.path()!=''">
+	<ul>
+		<li><a href="#">Assignment</a></li>
+		<li><a href="#">Submissions</a></li>
+	</ul>
+</div>
+
+<!-- Content placed here -->
+<div ui-view></div>

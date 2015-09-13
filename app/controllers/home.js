@@ -12,6 +12,6 @@ app.controller('TabCtrl', ['$scope', '$http', function($scope, $http) {
 	});
 }]);
 
-app.controller('ContentCtrl', ['$scope', function($scope) {
-	// do nothing
+app.controller('ContentCtrl', ['$scope', '$http', '$location', function($scope, $http, $location) {
+	$scope.location = $location;
 }]);
