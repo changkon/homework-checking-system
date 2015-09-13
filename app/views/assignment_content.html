@@ -1,5 +1,5 @@
 <!-- Show if base url -->
-<div id="tempWindow" ng-if="location.path()==''"><h1>Select an Assignment</h1></div>
+<div id="tempWindow" ng-if="location.path()=='/'"><h1>Select an Assignment</h1></div>
 
 <!-- Content placed here -->
-<div id="assignment-detail-container" ng-if="location.path()!=''" ui-view></div>
+<div id="assignment-detail-container" ng-if="location.path()!='/'" ui-view></div>

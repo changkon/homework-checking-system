@@ -1,10 +1,10 @@
 var app = angular.module('app', ['ui.router', 'ngAnimate']);
 
 app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
-	//$urlRouterProvider.otherwise('/');
+	$urlRouterProvider.otherwise('/');
 
 	$stateProvider.state('home', {
-		url: '',
+		url: '/',
 		views: {
 			'assignment': {
 				templateUrl: 'app/views/assignment_info.html',
@@ -16,7 +16,7 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 			}
 		}
 	}).state('home.content', {
-		url: '/{id:int}/{creator_id:int}',
+		url: '^/{id}/{creator_id}',
 		templateUrl: 'app/views/assignment_detail.html',
 		controller: 'DetailCtrl'
 	});
