@@ -26,3 +26,52 @@
 		display: inline-block;
 	}
 }
+
+.submission-entry
+{
+	cursor: pointer;
+
+	.submission-detail
+	{
+		display: flex;
+		margin-bottom: 15px;
+
+		.submission-icon
+		{
+			margin-right: 50px;
+
+			i
+			{
+				font-size: 8em;
+			}
+		}
+
+		.submission-caret
+		{
+			flex: 1;
+			text-align: right;
+			align-self: center;
+
+			i
+			{
+				font-size: 5em;
+			}
+		}
+
+	}
+
+	.submission-content.ng-enter
+	{
+		-webkit-transition: linear 0.3s;
+		-moz-transition: linear 0.3s;
+		-ms-transition: linear 0.3s;
+		-o-transition: linear 0.3s;
+		transition: linear 0.3s;
+		opacity: 0;
+	}
+
+	.submission-content.ng-enter-active
+	{
+		opacity: 1;
+	}
+}

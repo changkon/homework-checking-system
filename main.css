@@ -39,4 +39,37 @@ h1 {
   display: inline-block;
 }
 
+.submission-entry {
+  cursor: pointer;
+}
+.submission-entry .submission-detail {
+  display: flex;
+  margin-bottom: 15px;
+}
+.submission-entry .submission-detail .submission-icon {
+  margin-right: 50px;
+}
+.submission-entry .submission-detail .submission-icon i {
+  font-size: 8em;
+}
+.submission-entry .submission-detail .submission-caret {
+  flex: 1;
+  text-align: right;
+  align-self: center;
+}
+.submission-entry .submission-detail .submission-caret i {
+  font-size: 5em;
+}
+.submission-entry .submission-content.ng-enter {
+  -webkit-transition: linear 0.3s;
+  -moz-transition: linear 0.3s;
+  -ms-transition: linear 0.3s;
+  -o-transition: linear 0.3s;
+  transition: linear 0.3s;
+  opacity: 0;
+}
+.submission-entry .submission-content.ng-enter-active {
+  opacity: 1;
+}
+
 /*# sourceMappingURL=main.css.map */

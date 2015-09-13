@@ -13,9 +13,23 @@
 		<p>{{description}}</p>
 	</div>
 	<div class="tab" ng-if="showSubmission">
-		<div class="submission-entry" ng-repeat="entry in submissions">
-			<p>{{entry.creator.first_name}} {{entry.creator.last_name}}</p>
-			<p>turned in {{entry.submitted_at | date: 'longDate'}}</p>
+		<div class="submission-entry" ng-repeat="entry in submissions" ng-click="changeSubmissionContent($event, $index)">
+			<div class="submission-detail">
+				<div class="submission-icon">
+					<i class="fa fa-user"></i>
+				</div>
+				<div class="submission-user-info">
+					<h3>{{entry.creator.first_name}} {{entry.creator.last_name}}</h3>
+					<p>turned in {{entry.submitted_at | date: 'longDate'}}</p>
+				</div>
+				<div class="submission-caret">
+					<i class="fa fa-caret-up" ng-if="submissionIndex == $index"></i>
+					<i class="fa fa-caret-down" ng-if="submissionIndex != $index"></i>
+				</div>
+			</div>
+			<div class="submission-content" ng-if="submissionIndex == $index">
+				<p>{{entry.content}}</p>
+			</div>
 		</div>
 	</div>
 </div>

@@ -32,6 +32,7 @@ app.controller('DetailCtrl', ['$scope', '$http', '$stateParams', function($scope
 	var creator_id = $stateParams.creator_id;
 	$scope.tabList = ['Assignment', 'Submissions'];
 	$scope.showSubmission = false;
+	$scope.submissionIndex = -1;
 
 	$scope.changeActive = function(event) {
 		// remove active from all li
@@ -52,6 +53,10 @@ app.controller('DetailCtrl', ['$scope', '$http', '$stateParams', function($scope
 			$scope.showSubmission = false;
 		}
 	};
+
+	$scope.changeSubmissionContent = function(event, index) {
+		$scope.submissionIndex = $scope.submissionIndex == index ? -1 : index;
+	}
 
 	var findAssignment = function(obj) {
 		return obj.id == id;
