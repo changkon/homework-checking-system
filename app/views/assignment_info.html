@@ -1,3 +1,9 @@
+<!-- Div container for spinner -->
+<div ng-hide="data">
+	<i class="fa fa-spinner fa-pulse fa-3x"></i>
+</div>
+
+<!-- Assignment tabs -->
 <div class="assignment-tab" ng-repeat="x in data">
 	<a ui-sref="home.content({ id: x.id, creator_id: x.creator.id})">
 		<h3>{{x.title}}</h3>
