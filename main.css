@@ -1,5 +1,6 @@
 body {
   font-family: Arial;
+  margin: 0 75px;
 }
 
 #logo {
@@ -7,6 +8,16 @@ body {
   margin-top: 40px;
   margin-bottom: 35px;
   display: inline-block;
+}
+
+#main {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 75px;
+}
+
+a {
+  color: #03AACC;
 }
 
 .assignment-tab h3 {
@@ -19,11 +30,24 @@ body {
   display: block;
 }
 
+#assignment-tab {
+  margin-right: 50px;
+}
+
+#assignment-content {
+  flex: 1;
+  display: flex;
+}
+
 #tempWindow {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid black;
+  flex: 1;
+}
+
+#assignment-detail-container {
+  flex: 1;
 }
 
 #selection-tab ul {
@@ -34,6 +58,30 @@ body {
 }
 #selection-tab li {
   display: inline-block;
+  cursor: pointer;
+  padding: 15px;
+}
+#selection-tab li.active {
+  background-color: #B8E7F0;
+}
+#selection-tab li:hover {
+  background-color: #03AACC;
+}
+
+#tab-content .ng-enter {
+  -webkit-transition: linear 0.3s;
+  -moz-transition: linear 0.3s;
+  -ms-transition: linear 0.3s;
+  -o-transition: linear 0.3s;
+  transition: linear 0.3s;
+  opacity: 0;
+}
+#tab-content .ng-enter-active {
+  opacity: 1;
+}
+
+.tab .description {
+  margin-top: 35px;
 }
 
 .submission-entry {
@@ -56,17 +104,6 @@ body {
 }
 .submission-entry .submission-detail .submission-caret i {
   font-size: 5em;
-}
-.submission-entry .submission-content.ng-enter {
-  -webkit-transition: linear 0.3s;
-  -moz-transition: linear 0.3s;
-  -ms-transition: linear 0.3s;
-  -o-transition: linear 0.3s;
-  transition: linear 0.3s;
-  opacity: 0;
-}
-.submission-entry .submission-content.ng-enter-active {
-  opacity: 1;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -7,10 +7,13 @@
 
 <!-- Tab panes -->
 <div id="tab-content">
-	<div class="tab" ng-if="!showSubmission">
+	<div ng-hide="title">
+		<h3>Loading...</h3>
+	</div>
+	<div class="tab" ng-if="!showSubmission && title">
 		<h1>{{title}}</h1>
-		<p>due {{due_at | date: 'longDate'}}</p>
-		<p>{{description}}</p>
+		<h2>due {{due_at | date: 'longDate'}}</h2>
+		<p class="description">{{description}}</p>
 	</div>
 	<div class="tab" ng-if="showSubmission">
 		<div class="submission-entry" ng-repeat="entry in submissions" ng-click="changeSubmissionContent($event, $index)">
@@ -19,8 +22,8 @@
 					<i class="fa fa-user"></i>
 				</div>
 				<div class="submission-user-info">
-					<h3>{{entry.creator.first_name}} {{entry.creator.last_name}}</h3>
-					<p>turned in {{entry.submitted_at | date: 'longDate'}}</p>
+					<h2>{{entry.creator.first_name}} {{entry.creator.last_name}}</h2>
+					<h4>turned in {{entry.submitted_at | date: 'longDate'}}</h4>
 				</div>
 				<div class="submission-caret">
 					<i class="fa fa-caret-up" ng-if="submissionIndex == $index"></i>

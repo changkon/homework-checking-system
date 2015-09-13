@@ -1,6 +1,13 @@
 #assignment-tab
 {
 	//min-width: 300px;
+	margin-right: 50px;
+}
+
+#assignment-content
+{
+	flex: 1;
+	display: flex;
 }
 
 #tempWindow
@@ -8,7 +15,12 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border: 2px solid black;
+	flex: 1;
+}
+
+#assignment-detail-container
+{
+	flex: 1;
 }
 
 #selection-tab
@@ -24,6 +36,44 @@
 	li
 	{
 		display: inline-block;
+		cursor: pointer;
+		padding: 15px;
+	}
+
+	li.active
+	{
+		background-color: $secondary-color;
+	}
+
+	li:hover
+	{
+		background-color: $primary-color;
+	}
+}
+
+#tab-content
+{
+	.ng-enter
+	{
+		-webkit-transition: linear 0.3s;
+		-moz-transition: linear 0.3s;
+		-ms-transition: linear 0.3s;
+		-o-transition: linear 0.3s;
+		transition: linear 0.3s;
+		opacity: 0;
+	}
+
+	.ng-enter-active
+	{
+		opacity: 1;
+	}
+}
+
+.tab
+{
+	.description
+	{
+		margin-top: 35px;
 	}
 }
 
@@ -58,20 +108,5 @@
 			}
 		}
 
-	}
-
-	.submission-content.ng-enter
-	{
-		-webkit-transition: linear 0.3s;
-		-moz-transition: linear 0.3s;
-		-ms-transition: linear 0.3s;
-		-o-transition: linear 0.3s;
-		transition: linear 0.3s;
-		opacity: 0;
-	}
-
-	.submission-content.ng-enter-active
-	{
-		opacity: 1;
 	}
 }
