@@ -1,1 +1,21 @@
-<p>Hello World</p>
+<!-- Nav tabs -->
+<div id="selection-tab">
+	<ul>
+		<li ng-class="{'active':$first}" ng-repeat="value in tabList" ng-click="changeActive($event)">{{value}}</li>
+	</ul>
+</div>
+
+<!-- Tab panes -->
+<div id="tab-content">
+	<div class="tab" ng-if="!showSubmission">
+		<h1>{{title}}</h1>
+		<p>due {{due_at | date: 'longDate'}}</p>
+		<p>{{description}}</p>
+	</div>
+	<div class="tab" ng-if="showSubmission">
+		<div class="submission-entry" ng-repeat="entry in submissions">
+			<p>{{entry.creator.first_name}} {{entry.creator.last_name}}</p>
+			<p>turned in {{entry.submitted_at | date: 'longDate'}}</p>
+		</div>
+	</div>
+</div>
