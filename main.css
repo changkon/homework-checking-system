@@ -50,6 +50,18 @@ a {
   flex: 1;
 }
 
+#add-assignment-container {
+  margin-bottom: 30px;
+}
+#add-assignment-container button {
+  background-color: transparent !important;
+  border: 0 !important;
+  padding: 0;
+}
+#add-assignment-container i {
+  color: #004C99;
+}
+
 #selection-tab ul {
   list-style: none;
   padding: 0;

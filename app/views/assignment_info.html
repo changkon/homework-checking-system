@@ -1,3 +1,8 @@
+<!-- Add extra assignment -->
+<div id="add-assignment-container">
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus fa-2x"></i></button>
+</div>
+
 <!-- Div container for spinner -->
 <div ng-hide="data">
 	<i class="fa fa-spinner fa-pulse fa-3x"></i>
@@ -9,4 +14,34 @@
 		<h3>{{x.title}}</h3>
 		<p>due {{x.due_at | date: 'longDate'}}</p>
 	</a>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Add assignment</h4>
+			</div>
+			<div class="modal-body">
+				<div class="form-group">
+					<label for="assignmentTitle">Assignment title</label>
+					<input type="text" class="form-control" id="assignmentTitle" placeholder="Title" ng-model="newAssignment.title">
+				</div>
+				<div class="form-group">
+					<label for="assignmentDueDate">Due Date</label>
+					<input type="date" class="form-control" id="assignmentDueDate" ng-model="newAssignment.due_at">
+				</div>
+				<div class="form-group">
+					<label for="assignmentDescription">Description</label>
+					<input type="text" class="form-control" id="assignmentDescription" placeholder="Description" ng-model="newAssignment.description">
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" ng-click="addAssignment()" data-dismiss="modal">Add</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
 </div>
