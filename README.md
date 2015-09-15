@@ -8,6 +8,8 @@ Best viewed in latest version of Google Chrome and 1080p display.
 
 Mini assignment/personal project completed in 2 days.  
 
+View on : http://changkon.github.io/homework_checking_system  
+
 ## Technologies used
 * HTML/CSS
 * Javascript
